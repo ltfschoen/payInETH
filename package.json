@@ -1,0 +1,25 @@
+{
+  "name": "paywitheth",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "lerna": "^8.1.2"
+  },
+  "scripts": {
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "start": "lerna run start --parallel",
+    "start:uploadContract": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope uploadContract --stream dev",
+    "build:uploadContract": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope uploadContract --stream build",
+    "run:build:backend": "lerna run start --scope uploadContract",
+    "build:uploadContract:tsc": "cd ./packages/uploadContract && yarn run build",
+    "clean:uploadContract:tsc": "cd ./packages/uploadContract && yarn run clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-only",
+  "packageManager": "yarn@4.2.2"
+}

@@ -1,0 +1,11 @@
+**/node_modules/
+**/yarn-error.log
+**/.env
+.DS_Store
+.nx/cache
+.yarn
+tsconfig.tsbuildinfo
+dist/
+.env
+packages/paywitheth/artifacts/*
+packages/paywitheth/.env
